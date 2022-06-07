@@ -1,0 +1,55 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
+
+# Testing 
+
+Start with API Blueprint from **Scratch**
+
+## Cities [/cities]
+
+### List All Cities [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "Saensokh",
+                "name_local": "សែនសុខ",
+                "admin_code": "1208",
+                "admin_level": "khan"
+            }, {
+                "name": "Mean Chey",
+                "name_local": "មានជ័យ",
+                "admin_code": "1206",
+                "admin_level": "khan"
+            }, {
+                "name": "Dangkao",
+                "name_local": "ដង្កោ",
+                "admin_code": "1205",
+                "admin_level": "khan"
+            }
+        ]
+
+### Create a New Question [POST]
+
++ Request (application/json)
+
+                {
+                    "name": "Prampir Meakkakra",
+                    "name_local": "៧មករា",
+                    "admin_code": "1203",
+                    "admin_level": "khan"
+                }
+        
+
++ Response 201 (application/json)
+
+    + Body
+
+            
+                {
+                    "name": "Prampir Meakkakra",
+                    "name_local": "៧មករា",
+                    "admin_code": "1203",
+                    "admin_level": "khan"
+                }
