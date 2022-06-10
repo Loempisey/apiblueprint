@@ -3,7 +3,7 @@ dry-run: null
 hookfiles: null
 language: nodejs
 require: null
-server: npm start
+server: npm run server
 server-wait: 3
 init: false
 custom:
@@ -29,6 +29,6 @@ hooks-worker-term-timeout: 5000
 hooks-worker-term-retry: 500
 hooks-worker-handler-host: 127.0.0.1
 hooks-worker-handler-port: 61321
-config: ./dredd.yml
-blueprint: api-description.apib
-endpoint: 'http://poll.apiblueprint.org/'
+config: ./dredd.yml      #source of Dredd config file
+blueprint: api-description.apib  # API Blueprint file to get API definitions
+endpoint: 'http://127.0.0.1:8000' # the base url where the test will run
